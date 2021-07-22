@@ -29,3 +29,6 @@ func Kadanes(list []float64) int {
 
 	return int(globalMax)
 }
+
+//line 20-> Kadane provou por contradição que a maior soma de um subarray terminado em um indice n, é
+//ou o elemento em si, ou a soma do elemento com o subarray de maior soma terminado no indice n-1.
