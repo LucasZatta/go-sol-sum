@@ -4,7 +4,7 @@ FROM golang:alpine
 ENV GIN_MODE=release
 ENV PORT=8080
 
-ADD /src /go/src/github.com/go-sol-sum
+ADD /src 
 
 RUN go get github.com/gin-gonic/gin
 
