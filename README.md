@@ -33,7 +33,7 @@ Solve Max subarray sum problem
   
 ## Problem
 
-The max subarray sum problem is a pretty straight forward one, given an one dimensional list of n element, the task is to find a contiguous subarray with the largest sum. The optimal solution for this problem (O(n)) is achieved using Kadane's algorithm.
+The max subarray sum problem is a pretty straight forward one, given an one dimensional list of n elements, the task is to find a contiguous subarray with the largest sum. The optimal solution for this problem (O(n)) is achieved by using Kadane's algorithm.
 
 ### Kadane's Algorithm
 
