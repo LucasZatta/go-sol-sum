@@ -21,7 +21,7 @@ Once the build is finished, run the command `docker run -p 8080:8000 golang-maxs
 
 Approach 2: If you rather not clone this repository, just pull the DockerHub repository containing the project image.
 `docker pull lucasszatta/go-maxsum`
-After pulling the image, run it using the command: `docker run -p 8080:8000 golang-maxsum`
+After pulling the image, run it using the command: `docker run -p 8080:8000 lucasszatta/golang-maxsum`
 
 ## REST API
 Solve Max subarray sum problem
