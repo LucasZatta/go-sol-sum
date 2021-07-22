@@ -1,16 +1,21 @@
 FROM golang:alpine
 
 
-ENV GIN_MODE=release
-ENV PORT=8080
+# ENV GIN_MODE=release
+# ENV PORT=8080
 
-ADD /src 
+WORKDIR /app
 
-RUN go get github.com/gin-gonic/gin
+COPY go.mod .
 
+COPY go.sum .
 
+RUN go mod download
 
+COPY . .
 
-EXPOSE $PORT
+ENV PORT :8000
 
-ENTRYPOINT ["./app"]
+RUN go build
+
+CMD ["./go-sol-sum"]

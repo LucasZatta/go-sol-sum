@@ -1,9 +1,13 @@
 package main
 
-import "github.com/go-sol-sum/router"
+import (
+	"os"
+
+	"github.com/go-sol-sum/router"
+)
 
 func main() {
 	router := router.SetupRouter()
 
-	router.Run()
+	router.Run(os.Getenv("PORT"))
 }
