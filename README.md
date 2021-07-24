@@ -8,6 +8,7 @@ This is a simple GO API implemented using Gin Gonic. Its purpose is to solve the
 │   └──subarraysum.go  \\Main logic accessed by the router
 ├── models
 │   └──maxsum.go  \\POST request structure and Algorithms implementation
+│   └──maxsum_test.go \\Kadenes algorithm unit test
 ├── router
 │   └──router.go  \\Router and paths
 ├── Dockerfile    \\Dockerfile configurations(ENV, commands, dependencies installation)
@@ -16,12 +17,17 @@ This is a simple GO API implemented using Gin Gonic. Its purpose is to solve the
 ├── main.go        
 ```
 ## Installation
-Approach 1: Inside the project file, run the command `docker build -t golang-maxsum`, this will buid a docker image containing the project using the dockerfile configurations.
+### Approach 1
+Inside the project file, run the command `docker build -t golang-maxsum`, this will buid a docker image containing the project using the dockerfile configurations.
 Once the build is finished, run the command `docker run -p 8080:8000 golang-maxsum`. This will run the image with specified ports parameter.
 
-Approach 2: If you rather not clone this repository, just pull the DockerHub repository containing the project image.
+### Approach 2
+If you rather not clone this repository, just pull the DockerHub repository containing the project image.
 `docker pull lucasszatta/go-maxsum`
 After pulling the image, run it using the command: `docker run -p 8080:8000 lucasszatta/golang-maxsum`
+
+### Testing
+There is one unit test implemented to check the algorithms output, to test it, just run the command `go test` inside the models folder.
 
 ## REST API
 Solve Max subarray sum problem
